@@ -1,0 +1,2 @@
+.feature-card { width: 100%; border-right: 0; border-bottom: 0; border-left: 0; color: var(--ink); text-align: left; cursor: pointer; }.feature-card-title, .feature-card-copy { display: block; }.feature-card-title { margin: 76px 0 10px; font-size: 14px; font-weight: 800; letter-spacing: -.04em; }.feature-card-copy { max-width: 205px; color: var(--muted); font-size: 11px; line-height: 1.65; }.feature-card:focus-visible { outline-offset: -4px; }
+@media (max-width: 640px) { .feature-card-title { margin-top: 50px; } }

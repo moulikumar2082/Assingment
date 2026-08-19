@@ -1,0 +1,6 @@
+.feature-detail-backdrop { position: fixed; z-index: 50; inset: 0; display: grid; place-items: center; padding: 20px; background: rgba(23, 36, 31, .58); backdrop-filter: blur(8px); }
+.feature-detail-dialog { width: min(100%, 470px); position: relative; padding: 38px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); box-shadow: 0 28px 80px rgba(13, 25, 20, .28); }
+.feature-detail-close { position: absolute; top: 16px; right: 17px; width: 30px; height: 30px; border-radius: 50%; color: var(--muted); background: transparent; font-size: 24px; line-height: 1; }.feature-detail-close:hover { color: var(--ink); background: #e8ece6; }
+.feature-detail-icon { display: grid; place-items: center; width: 42px; height: 42px; margin-bottom: 23px; border-radius: 10px; color: var(--blue); background: #e8edff; font-size: 20px; }
+.feature-detail-dialog h2 { max-width: none; margin: 0 0 14px; font-size: 35px; letter-spacing: -.07em; }.feature-detail-dialog > p:not(.kicker) { max-width: 355px; margin-bottom: 25px; color: var(--muted); font-size: 14px; line-height: 1.75; }.feature-detail-action { width: 100%; }
+@media (max-width: 640px) { .feature-detail-dialog { padding: 31px 22px; }.feature-detail-dialog h2 { font-size: 31px; } }

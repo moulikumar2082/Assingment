@@ -1,0 +1,11 @@
+const profiles = {
+  'Data Science': `Alex Morgan\nB.Tech Computer Science, Northbridge Institute, 2025\n\nEDUCATION\nB.Tech Computer Science, Northbridge Institute, 2025\n\nSKILLS\nPython, SQL, Pandas, NumPy, Power BI, Machine Learning, Scikit-learn, Data Visualization, Git\n\nPROJECTS\nCustomer Churn Prediction\nBuilt a customer churn prediction model using Python, Pandas and Scikit-learn. Compared classification models and evaluated results.\nSales Performance Dashboard\nCreated a Power BI dashboard using SQL data to visualize sales performance and trends.\n\nINTERNSHIPS\nData Analytics Intern\nUsed Python and SQL to prepare weekly business reports.\n\nCERTIFICATIONS\nApplied Machine Learning Certificate\n\nACHIEVEMENTS\nPresented the churn project at a student research showcase.`,
+  'Cyber Security': `Priya Shah\nBSc Cyber Security, Westfield University, 2024\n\nEDUCATION\nBSc Cyber Security, Westfield University, 2024\n\nSKILLS\nPython, Linux, Networking, Wireshark, Burp Suite, SIEM, SOC, Penetration Testing, Git\n\nPROJECTS\nNetwork Traffic Monitor\nBuilt a Python and Wireshark based network traffic monitoring tool for a lab environment.\nWeb Security Assessment\nPerformed penetration testing with Burp Suite and documented vulnerability findings.\n\nEXPERIENCE\nSecurity Operations Intern\nReviewed SIEM alerts and supported SOC incident triage.\n\nCERTIFICATIONS\nCompTIA Security+\n\nCOURSEWORK\nNetwork Security, Ethical Hacking, Digital Forensics`,
+  'Frontend': `Sam Taylor\nBSc Software Engineering, City College, 2025\n\nEDUCATION\nBSc Software Engineering, City College, 2025\n\nSKILLS\nReact, JavaScript, TypeScript, HTML, CSS, Next.js, Git, Figma\n\nPROJECTS\nEvent Booking Platform\nDeveloped a responsive React and TypeScript booking platform with a Next.js frontend and accessible HTML and CSS.\nPortfolio Website\nDesigned and built a portfolio website in React with Figma wireframes and responsive layouts.\n\nINTERNSHIPS\nFrontend Developer Intern\nImplemented reusable React components and collaborated with designers.\n\nACHIEVEMENTS\nWon second place in a university interface design challenge.`,
+}
+
+export const demoProfiles = Object.keys(profiles)
+
+export function createDemoFile(profile) {
+  return new File([profiles[profile]], `${profile.replace(/ /g, '-')}-demo-cv.txt`, { type: 'text/plain' })
+}

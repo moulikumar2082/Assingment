@@ -1,0 +1,222 @@
+.signin-backdrop {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  animation: backdrop-fade 0.25s ease-out;
+}
+
+.signin-dialog {
+  width: min(100%, 440px);
+  position: relative;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 30px 90px -10px rgba(15, 23, 42, 0.25);
+  animation: dialog-pop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.signin-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--muted);
+  background: #f1f5f9;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
+}
+.signin-close:hover {
+  color: var(--ink);
+  background: #e2e8f0;
+  transform: rotate(90deg);
+}
+
+.signin-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  color: white;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  box-shadow: 0 8px 20px -3px rgba(15, 23, 42, 0.3);
+  font: 600 12px 'DM Mono';
+  letter-spacing: -0.05em;
+}
+
+.signin-dialog h2 {
+  max-width: none;
+  margin: 0 0 10px;
+  font-size: 32px;
+  letter-spacing: -0.06em;
+  color: var(--ink);
+}
+
+.signin-copy {
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.social-auth-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.signin-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: white;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  transition: all 0.2s ease;
+}
+.signin-social-btn:hover {
+  background: #f0f6ff;
+  border-color: var(--blue);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.12);
+}
+.linkedin-btn svg { color: #0a66c2; fill: #0a66c2; }
+.github-btn svg { color: #0f172a; fill: #0f172a; }
+.google-btn svg { color: #ea4335; }
+
+.signin-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 18px 0 16px;
+  color: #64748b;
+  font: 500 10px 'DM Mono';
+  letter-spacing: 0.05em;
+}
+.signin-divider::before, .signin-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e2e8f0;
+}
+.signin-divider span {
+  padding: 0 12px;
+}
+
+.signin-dialog form {
+  display: grid;
+  gap: 10px;
+}
+.signin-dialog label {
+  margin-top: 6px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+.signin-dialog input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  outline: none;
+  color: var(--ink);
+  background: white;
+  font-size: 13px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.signin-dialog input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+.password-field {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.password-field input {
+  padding-right: 60px;
+}
+.password-field button {
+  position: absolute;
+  right: 12px;
+  padding: 6px;
+  color: var(--blue);
+  background: transparent;
+  font: 600 10px 'DM Mono';
+}
+
+.signin-submit {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.signin-signup-toggle {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+.signin-signup-toggle button {
+  padding: 0 4px;
+  border: none;
+  background: transparent;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.signin-signup-toggle button:hover {
+  color: #1d4ed8;
+}
+
+.signin-disclaimer {
+  margin: 16px 0 0;
+  color: #64748b;
+  font: 500 10px 'DM Mono';
+  text-align: center;
+}
+
+.signin-success {
+  text-align: center;
+}
+.signin-success .signin-icon {
+  margin: 0 auto 20px;
+  color: white;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  font-size: 20px;
+}
+.signin-success h2 {
+  margin-bottom: 12px;
+}
+.signin-success > p:not(.kicker) {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .signin-dialog { padding: 30px 22px; }
+  .signin-dialog h2 { font-size: 28px; }
+}

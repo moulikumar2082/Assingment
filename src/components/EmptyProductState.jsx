@@ -1,0 +1,7 @@
+import './EmptyProductState.css'
+
+function EmptyProductState({ onAnalyze, onDemo }) {
+  return <section className="empty-product section-shell" id="top"><div className="empty-copy"><p className="kicker"><span className="kicker-dot" /> CAREER INTELLIGENCE / PART 02</p><h1>Your CV says what you know. <span>CareerLens shows what it proves.</span></h1><p>Upload your CV and get an evidence-based view of the skills, projects, experience, and gaps actually present in it.</p><div className="hero-actions"><button className="button" type="button" onClick={onAnalyze}>Analyze My CV <span aria-hidden="true">↗</span></button><a className="text-link" href="#how-it-works">See How It Works <span aria-hidden="true">↓</span></a></div><p className="hero-note"><span className="note-mark">✦</span> No fixed career score. Your CV is the source of truth.</p></div><div className="empty-visual"><div className="empty-card-head"><span><i className="empty-pulse" /> CAREERLENS AI / WAITING</span><span>NO PROFILE LOADED</span></div><div className="empty-card-body"><div className="empty-orbit orbit-a" /><div className="empty-orbit orbit-b" /><span className="empty-card-icon">CL</span><h2>Your career profile<br /><i>starts with your CV.</i></h2><p>We analyze skills, projects, and experience actually present in your document.</p><button type="button" className="demo-link" onClick={onDemo}>Try a demo CV <span aria-hidden="true">↗</span></button></div></div></section>
+}
+
+export default EmptyProductState

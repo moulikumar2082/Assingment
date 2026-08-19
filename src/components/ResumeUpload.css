@@ -1,0 +1,225 @@
+.upload-backdrop {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  animation: backdrop-fade 0.25s ease-out;
+}
+
+@keyframes backdrop-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.upload-dialog {
+  width: min(100%, 480px);
+  position: relative;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 30px 90px -10px rgba(15, 23, 42, 0.25);
+  animation: dialog-pop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes dialog-pop {
+  from { transform: scale(0.95) translateY(10px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.upload-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--muted);
+  background: #f1f5f9;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
+}
+.upload-close:hover {
+  color: var(--ink);
+  background: #e2e8f0;
+  transform: rotate(90deg);
+}
+
+.upload-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  color: white;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 8px 20px -3px rgba(37, 99, 235, 0.4);
+  font-size: 22px;
+}
+
+.upload-dialog h2 {
+  max-width: none;
+  margin: 0 0 10px;
+  font-size: 32px;
+  letter-spacing: -0.06em;
+  color: var(--ink);
+}
+
+.upload-copy {
+  max-width: 380px;
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.upload-dropzone {
+  min-height: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px dashed #cbd5e1;
+  border-radius: var(--radius-md);
+  color: var(--ink);
+  background: #f8fafc;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 16px;
+}
+.upload-dropzone:hover {
+  border-color: var(--blue);
+  background: #f0f6ff;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.12);
+}
+.upload-dropzone strong {
+  max-width: 100%;
+  padding: 0 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  color: var(--ink);
+}
+.upload-dropzone span, .upload-disclaimer {
+  color: #64748b;
+  font: 500 10px 'DM Mono';
+}
+
+.upload-message {
+  margin: 14px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.upload-message.success { color: #059669; }
+.upload-message.error { color: #dc2626; }
+
+.upload-submit {
+  width: 100%;
+  margin-top: 22px;
+}
+.upload-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  box-shadow: none;
+  transform: none;
+}
+
+.upload-disclaimer {
+  margin: 16px 0 0;
+  text-align: center;
+}
+
+.guest-auth-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-radius: var(--radius-sm);
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+}
+.guest-auth-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.guest-auth-text strong {
+  color: #9f1239;
+  font-size: 13px;
+}
+.guest-auth-text span {
+  color: #475569;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.guest-signin-btn {
+  flex-shrink: 0;
+  padding: 9px 16px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transition: all 0.2s ease;
+}
+.guest-signin-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.disabled-dropzone {
+  opacity: 0.7;
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  cursor: pointer;
+}
+.disabled-dropzone:hover {
+  border-color: #f43f5e;
+  background: #fff1f2;
+}
+
+.guest-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.owner-reset-btn {
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.owner-reset-btn:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+@media (max-width: 640px) {
+  .upload-dialog { padding: 30px 22px; }
+  .upload-dialog h2 { font-size: 28px; }
+  .guest-auth-banner { flex-direction: column; align-items: flex-start; }
+}
